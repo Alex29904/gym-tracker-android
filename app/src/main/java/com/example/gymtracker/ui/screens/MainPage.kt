@@ -25,7 +25,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.gymtracker.Workout
+import com.example.gymtracker.data.Workout
 import com.example.gymtracker.ui.theme.GymTrackerTheme
 
 @OptIn(ExperimentalMaterial3Api::class)

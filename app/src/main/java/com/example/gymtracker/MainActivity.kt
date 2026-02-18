@@ -19,11 +19,6 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-data class Workout(
-    val id: Int,
-    var name: String
-)
-
 //Definisce le UI preview per la modalità chiara e quella scura
 /*@Preview(name = "Light Mode")
 @Preview(
