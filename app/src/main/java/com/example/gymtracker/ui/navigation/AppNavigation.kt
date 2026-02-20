@@ -3,11 +3,13 @@ package com.example.gymtracker.ui.navigation
 import com.example.gymtracker.ui.screens.MainPage
 import com.example.gymtracker.ui.screens.WorkoutDetailPage
 import androidx.compose.runtime.Composable
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.gymtracker.viewmodel.WorkoutViewModel
 
 @Composable
 fun AppNavigation(){
@@ -19,7 +21,8 @@ fun AppNavigation(){
         startDestination = "list"
     ) {
         composable("list") {
-            MainPage(navController)
+            val viewModel: WorkoutViewModel = viewModel()
+            MainPage(navController, viewModel)
         }
 
         composable(
@@ -30,7 +33,8 @@ fun AppNavigation(){
         ) { backStackEntry ->
 
             val workoutId = backStackEntry.arguments?.getInt("id")
-            WorkoutDetailPage(workoutId)
+            val viewModel: WorkoutViewModel = viewModel()
+            WorkoutDetailPage(workoutId, viewModel)
         }
     }
 }

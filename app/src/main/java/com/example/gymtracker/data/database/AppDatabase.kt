@@ -8,11 +8,11 @@ import com.example.gymtracker.data.dao.ExerciseDao
 import com.example.gymtracker.data.dao.WorkoutDao
 import com.example.gymtracker.data.dao.WorkoutExerciseDao
 import com.example.gymtracker.data.entity.Exercise
-import com.example.gymtracker.data.entity.UserWorkout
+import com.example.gymtracker.data.entity.Workout
 import com.example.gymtracker.data.entity.WorkoutExercise
 
 @Database(
-    entities = [UserWorkout::class, Exercise::class, WorkoutExercise::class],
+    entities = [Workout::class, Exercise::class, WorkoutExercise::class],
     version = 1
 )
 abstract class AppDatabase : RoomDatabase(){

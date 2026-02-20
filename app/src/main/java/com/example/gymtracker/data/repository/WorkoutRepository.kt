@@ -1,7 +1,7 @@
 package com.example.gymtracker.data.repository
 
-import com.example.gymtracker.data.Workout
 import com.example.gymtracker.data.dao.WorkoutDao
+import com.example.gymtracker.data.entity.Workout
 
 class WorkoutRepository(private val workoutDao: WorkoutDao) {
 

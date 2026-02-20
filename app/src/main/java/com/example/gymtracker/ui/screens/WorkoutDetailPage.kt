@@ -11,10 +11,11 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.example.gymtracker.viewmodel.WorkoutViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun WorkoutDetailPage(id: Int?) {
+fun WorkoutDetailPage(id: Int?, viewModel: WorkoutViewModel) {
 
     Scaffold(
         topBar = {
